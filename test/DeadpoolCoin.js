@@ -12,14 +12,26 @@ contract('DeadpoolCoin', function(accounts) {
       console.log('​name', name);
       assert.equal(name, 'THE DEAD COIN', 'has the correct name')
     });
-    //   assert.equal(name, 'DApp Token', 'has the correct name');
-    //   return tokenInstance.symbol();
-    // }).then(function(symbol) {
-    //   assert.equal(symbol, 'DAPP', 'has the correct symbol');
-    //   return tokenInstance.standard();
-    // }).then(function(standard) {
-    //   assert.equal(standard, 'DApp Token v1.0', 'has the correct standard');
-    // });
+
   })
- 
+
+  
+  it("init the contract with async/wait functions ", async function() {
+    let tokenInstance = await DeadpoolCoin.deployed();
+    let name = await tokenInstance.name()
+    console.log('name 2', name);
+    assert.equal(name, 'THE DEAD COIN', 'has the correct name')
+  });
+
+  it("init the contract with async/wait + promises functions ", async function() {
+    let tokenInstance = await DeadpoolCoin.deployed();
+    
+    tokenInstance.name().then(function(name) {
+      console.log('name 2', name);
+      assert.equal(name, 'THE DEAD COIN', 'has the correct name')
+    })
+
+  });
+
+
 });
