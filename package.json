@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/helderjnpinto/DeadpoolToken/issues"
   },
-  "homepage": "https://github.com/helderjnpinto/DeadpoolToken#readme"
+  "homepage": "https://github.com/helderjnpinto/DeadpoolToken#readme",
+  "dependencies": {
+    "openzeppelin-solidity": "1.10.0"
+  }
 }
