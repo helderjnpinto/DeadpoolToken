@@ -69,5 +69,13 @@
         geth attach
     ´´´
   
-    
+### What is contracts?
 
+https://github.com/trufflesuite/truffle-contract
+
+
+### Truffle migrations 
+
+https://truffleframework.com/docs/getting_started/migrations
+
+https://medium.com/@blockchain101/demystifying-truffle-migrate-21afbcdf3264
