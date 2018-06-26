@@ -6,8 +6,8 @@
 var GETH_HOSTNAME	= "localhost";	// put your IP address!
 var APP_HOSTNAME 	= "See package.json --> scripts --> start: Change 'localhost'!!!";
 
-var GETH_RPCPORT  	= 8545; 		// for geth --rpcport GETH_RPCPORT
-var APP_PORT 		= "See package.json --> scripts --> start: Perhaps change '8000'";
+var GETH_RPCPORT  	= 7545; 		// for geth --rpcport GETH_RPCPORT
+var APP_PORT 		= "See package.json --> scripts --> start: Perhaps change '8001'";
 
 // this is creating the corrected geth command
 var WL=window.location;
@@ -94,8 +94,8 @@ angular.module('ethExplorer', ['ngRoute','ui.bootstrap','filters','ngSanitize'])
 
         // begin AltSheets changes
         var web3 = new Web3();
-	web3.setProvider(new web3.providers.HttpProvider("http://"+GETH_HOSTNAME+":"+GETH_RPCPORT));
-	// end AltSheets changes
+	    web3.setProvider(new web3.providers.HttpProvider("http://"+GETH_HOSTNAME+":"+GETH_RPCPORT));
+	    // end AltSheets changes
 
         $rootScope.web3=web3;
         // MetaMask injects its own web3 instance in all pages, override it
